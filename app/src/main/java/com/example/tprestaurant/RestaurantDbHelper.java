@@ -29,7 +29,8 @@ public static  final String Db_Name = "Restaurant";
     public RestaurantDbHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
-
+    /* Called when the database is created for the FIRST time.
+     If a database already exists on disk with the same DATABASE_NAME, this method will NOT be called.*/
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_Create_Entries);
@@ -37,6 +38,9 @@ public static  final String Db_Name = "Restaurant";
         Log.d(TAG,"database created");
     }
 
+    // Called when the database needs to be upgraded.
+    // This method will only be called if a database already exists on disk with the same DATABASE_NAME,
+    // but the DATABASE_VERSION is different than the version of the database that exists on disk.
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
     }
