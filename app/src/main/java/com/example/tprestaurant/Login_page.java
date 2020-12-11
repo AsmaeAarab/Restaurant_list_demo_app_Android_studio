@@ -25,15 +25,16 @@ public class Login_page extends AppCompatActivity {
         RestaurantDbHelper db = new RestaurantDbHelper(this);
         db.createDfaultAuthentification();
     }
+
     @OnClick(R.id.submit)
     public void onSubmit(){
         RestaurantDbHelper db=new RestaurantDbHelper(this);
         Authentification auth=db.getAuth(login.getText().toString(),password.getText().toString());
-    if(auth!=null){
-        Toast.makeText(getApplicationContext(),"authentification reussie",Toast.LENGTH_LONG).show();
-    }
-    else
-        Toast.makeText(getApplicationContext(),"failed authentification",Toast.LENGTH_LONG).show();
+        if(auth != null){
+            Toast.makeText(getApplicationContext(),"authentification reussie",Toast.LENGTH_LONG).show();
+        }
+        else
+            Toast.makeText(getApplicationContext(),"failed authentification",Toast.LENGTH_LONG).show();
     }
 
 }
