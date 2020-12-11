@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
-
+// hello git
 public class RestaurantDbHelper extends SQLiteOpenHelper {
 public static  final int Db_Version=1;
 public static final String Table_Name="authentification";
