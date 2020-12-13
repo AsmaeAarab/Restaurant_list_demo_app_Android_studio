@@ -2,6 +2,7 @@ package com.example.tprestaurant;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -36,18 +37,6 @@ public class Login_page extends AppCompatActivity {
         LoadData();
         updateViews();
     }
-
-    @OnClick(R.id.submit)
-    public void onSubmit(){
-        RestaurantDbHelper db=new RestaurantDbHelper(this);
-        Authentification auth=db.getAuth(login.getText().toString(),password.getText().toString());
-        if(auth != null){
-            Toast.makeText(getApplicationContext(),"authentification reussie",Toast.LENGTH_LONG).show();
-            SaveLogin();
-        }
-        else
-            Toast.makeText(getApplicationContext(),"failed authentification",Toast.LENGTH_LONG).show();
-    }
    /* @OnCheckedChanged(R.id.remember_me)
     public void onRememberMeCheckedChange(boolean checked)
     {
@@ -81,6 +70,22 @@ public class Login_page extends AppCompatActivity {
         Log.i("message","on destroy");
         super.onDestroy();
     }
+
+    @OnClick(R.id.submit)
+    public void onSubmit(){
+        RestaurantDbHelper db=new RestaurantDbHelper(this);
+        Authentification auth=db.getAuth(login.getText().toString(),password.getText().toString());
+        if(auth != null){
+            Toast.makeText(getApplicationContext(),"authentification reussie",Toast.LENGTH_LONG).show();
+            SaveLogin();
+            Intent acceuil = new Intent(Login_page.this,Acceuil.class);
+            startActivity(acceuil);
+            finish();
+        }
+        else
+            Toast.makeText(getApplicationContext(),"failed authentification",Toast.LENGTH_LONG).show();
+    }
+
     public void DestroyPrefs(){
         SharedPreferences sharedPreferences = this.getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -90,4 +95,5 @@ public class Login_page extends AppCompatActivity {
         updateViews();
         Toast.makeText(this,"Preferences ares destroyed",Toast.LENGTH_LONG).show();
     }
+
 }
