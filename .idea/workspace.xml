@@ -6,7 +6,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="NONE" />
@@ -36,7 +36,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bfe8f87-05e8-4f8d-8e4e-fc9a360585b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Acceuil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Authentification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/CategoryAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/CategoryDbHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Login_page.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/RestaurantDbHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Restaurant_Liste.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_acceuil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_acceuil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_restaurant__liste.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/login_page.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/login_page.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +59,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" show_ignored="true" />
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[623bcbc]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -54,6 +69,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="layoutResourceFile" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -72,21 +88,40 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/test/java" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.tprestaurant.Activities" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant\app\src\main\java\com\example\tprestaurant" />
       <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant\app\src\main\res\drawable" />
       <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant\app\src\main\res\drawable-v24" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.tprestaurant.Activities" />
+      <recent name="com.example.tprestaurant" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant" />
+      <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant\app\src\main\java\com\example\tprestaurant\Activities" />
+      <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant\app\src\main\res\drawable" />
+      <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant\app\src\main\res\drawable-v24" />
+    </key>
+    <key name="android.template.-570799942">
+      <recent name="com.example.tprestaurant" />
+    </key>
+    <key name="android.template.-993679675">
+      <recent name="com.example.tprestaurant" />
     </key>
     <key name="android.template.988684800">
       <recent name="com.example.tprestaurant" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant\app\src\main\res\drawable" />
-      <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant\app\src\main\res\drawable-v24" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.tprestaurant.Activities" />
     </key>
   </component>
   <component name="RunManager">
@@ -201,7 +236,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607868000012</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="categories added">
+      <created>1607868105490</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1607868105490</updated>
+    </task>
+    <task id="LOCAL-00007" summary="categories added">
+      <created>1607868277969</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1607868277969</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +270,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="test de changement" />
@@ -244,22 +294,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="747" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607644607498" />
-    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1607736266379">
+    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1608429772048">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1607736266379" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607861775869">
+    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1608429772048" />
+    <state x="290" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1608396989573">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607861775869" />
+    <state x="290" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1608396989573" />
+    <state x="464" y="232" width="441" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1608571576685">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="464" y="232" width="441" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1608571576685" />
+    <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1608396991866">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1608396991866" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608396961976">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608396961976" />
     <state x="263" y="118" key="AndroidCreateResourceDirectoryDialog" timestamp="1607354672178">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="118" key="AndroidCreateResourceDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1607354672178" />
-    <state x="526" y="120" key="AndroidCreateResourceFileDialog" timestamp="1607716016092">
+    <state x="526" y="120" key="AndroidCreateResourceFileDialog" timestamp="1607885643008">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="526" y="120" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607716016092" />
+    <state x="526" y="120" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607885643008" />
     <state x="3" y="0" key="CommitChangelistDialog2" timestamp="1607689474284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -268,10 +330,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="58" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607689788839" />
-    <state x="771" y="103" key="FileChooserDialogImpl" timestamp="1607860693740">
+    <state x="771" y="103" key="FileChooserDialogImpl" timestamp="1608406527488">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="771" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607860693740" />
+    <state x="771" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608406527488" />
     <state x="286" y="261" key="Github.ShareDialog" timestamp="1607687827552">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -280,38 +342,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="115" y="69" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607687841477" />
-    <state width="497" height="99" key="GridCell.Tab.0.bottom" timestamp="1607866029072">
+    <state width="1323" height="135" key="GridCell.Tab.0.bottom" timestamp="1608571966546">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="497" height="99" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1607866029072" />
-    <state width="497" height="99" key="GridCell.Tab.0.center" timestamp="1607866029072">
+    <state width="1323" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608571966546" />
+    <state width="1323" height="135" key="GridCell.Tab.0.center" timestamp="1608571966546">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="497" height="99" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1607866029072" />
-    <state width="497" height="99" key="GridCell.Tab.0.left" timestamp="1607866029072">
+    <state width="1323" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608571966546" />
+    <state width="1323" height="135" key="GridCell.Tab.0.left" timestamp="1608571966546">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="497" height="99" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1607866029072" />
-    <state width="497" height="99" key="GridCell.Tab.0.right" timestamp="1607866029072">
+    <state width="1323" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608571966546" />
+    <state width="1323" height="135" key="GridCell.Tab.0.right" timestamp="1608571966546">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="497" height="99" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1607866029072" />
+    <state width="1323" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608571966546" />
     <state x="111" y="69" key="RollbackChangesDialog" timestamp="1607689790843">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="111" y="69" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607689790843" />
-    <state x="0" y="8" key="SettingsEditor" timestamp="1607689241785">
+    <state x="450" y="17" width="916" height="711" key="SettingsEditor" timestamp="1608040079762">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="8" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1607689241785" />
-    <state x="6" y="100" key="Vcs.Push.Dialog.v2" timestamp="1607867251854">
+    <state x="450" y="17" width="916" height="711" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608040079762" />
+    <state x="6" y="100" key="Vcs.Push.Dialog.v2" timestamp="1607868310359">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="6" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607867251854" />
-    <state x="832" y="143" key="chooseDestDirectoryDialog" timestamp="1607822080958">
+    <state x="6" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607868310359" />
+    <state x="832" y="143" key="chooseDestDirectoryDialog" timestamp="1608384817208">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="832" y="143" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1607822080958" />
+    <state x="832" y="143" key="chooseDestDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1608384817207" />
     <state x="76" y="155" key="git4idea.merge.GitPullDialog" timestamp="1607690543060">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -320,10 +382,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="602" height="364" key="javadoc.popup/0.0.1366.728@0.0.1366.728" timestamp="1607823346488" />
-    <state x="647" y="164" key="run.anything.popup" timestamp="1607357504041">
+    <state x="737" y="111" key="refactoring.ChangeSignatureDialog" timestamp="1608423311167">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="647" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607357504041" />
+    <state x="737" y="111" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1608423311167" />
+    <state x="647" y="164" key="run.anything.popup" timestamp="1608471907721">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="647" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1608471907721" />
+    <state x="475" y="222" key="scopes" timestamp="1608393482644">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="475" y="222" key="scopes/0.0.1366.728@0.0.1366.728" timestamp="1608393482644" />
     <state x="78" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607689669165">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
