@@ -35,13 +35,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bfe8f87-05e8-4f8d-8e4e-fc9a360585b6" name="Default Changelist" comment="" />
+    <list default="true" id="7bfe8f87-05e8-4f8d-8e4e-fc9a360585b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" show_ignored="true" />
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -247,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608762902574</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="After adding maps">
+      <created>1608762940276</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1608762940276</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,22 +348,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="115" y="69" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607687841477" />
-    <state width="1323" height="135" key="GridCell.Tab.0.bottom" timestamp="1608571966546">
+    <state width="1323" height="132" key="GridCell.Tab.0.bottom" timestamp="1608762742433">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="135" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608571966546" />
-    <state width="1323" height="135" key="GridCell.Tab.0.center" timestamp="1608571966546">
+    <state width="1323" height="132" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608762742433" />
+    <state width="1323" height="132" key="GridCell.Tab.0.center" timestamp="1608762742433">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="135" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608571966546" />
-    <state width="1323" height="135" key="GridCell.Tab.0.left" timestamp="1608571966546">
+    <state width="1323" height="132" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608762742433" />
+    <state width="1323" height="132" key="GridCell.Tab.0.left" timestamp="1608762742432">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="135" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608571966546" />
-    <state width="1323" height="135" key="GridCell.Tab.0.right" timestamp="1608571966546">
+    <state width="1323" height="132" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608762742432" />
+    <state width="1323" height="132" key="GridCell.Tab.0.right" timestamp="1608762742433">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="135" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608571966546" />
+    <state width="1323" height="132" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608762742433" />
     <state x="111" y="69" key="RollbackChangesDialog" timestamp="1607689790843">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -364,10 +372,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="450" y="17" width="916" height="711" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608040079762" />
-    <state x="6" y="100" key="Vcs.Push.Dialog.v2" timestamp="1607868310359">
+    <state x="6" y="100" key="Vcs.Push.Dialog.v2" timestamp="1608763565633">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="6" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607868310359" />
+    <state x="6" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608763565633" />
     <state x="832" y="143" key="chooseDestDirectoryDialog" timestamp="1608384817208">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
