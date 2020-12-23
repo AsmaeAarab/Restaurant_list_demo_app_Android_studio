@@ -35,13 +35,16 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bfe8f87-05e8-4f8d-8e4e-fc9a360585b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="7bfe8f87-05e8-4f8d-8e4e-fc9a360585b6" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
@@ -364,18 +367,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="132" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608762742433" />
-    <state x="111" y="69" key="RollbackChangesDialog" timestamp="1607689790843">
+    <state x="111" y="69" key="RollbackChangesDialog" timestamp="1608764556197">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="111" y="69" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607689790843" />
+    <state x="111" y="69" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1608764556197" />
     <state x="450" y="17" width="916" height="711" key="SettingsEditor" timestamp="1608040079762">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="450" y="17" width="916" height="711" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608040079762" />
-    <state x="6" y="100" key="Vcs.Push.Dialog.v2" timestamp="1608763565633">
+    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2" timestamp="1608764603662">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="6" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608763565633" />
+    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608764603662" />
     <state x="832" y="143" key="chooseDestDirectoryDialog" timestamp="1608384817208">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
