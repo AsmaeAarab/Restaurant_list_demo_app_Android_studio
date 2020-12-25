@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/categoryItemId"
     android:layout_width="match_parent"
-    android:layout_height="80dp"
+    android:layout_height="110dp"
+    android:background="#E1D9D9"
     android:orientation="vertical"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp">
+    android:padding="3dp">
 
     <ImageView
         android:id="@+id/image_Category"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
         android:layout_gravity="center|top"
-        android:padding="10dp"
-        />
+        android:padding="10dp" />
 
     <TextView
         android:id="@+id/title_Category"

@@ -35,7 +35,22 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bfe8f87-05e8-4f8d-8e4e-fc9a360585b6" name="Default Changelist" comment="" />
+    <list default="true" id="7bfe8f87-05e8-4f8d-8e4e-fc9a360585b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MenuActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/MenuAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DialogBox/DialogReductionMsg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Menu_Data/MenuData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Model/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MapsActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_acceuil.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_acceuil.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/category_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/category_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -46,7 +61,7 @@
       <option value="directory" />
     </option>
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[623bcbc]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -55,8 +70,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="layoutResourceFile" />
         <option value="Interface" />
+        <option value="layoutResourceFile" />
         <option value="Class" />
       </list>
     </option>
@@ -80,7 +95,7 @@
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
+    <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.tprestaurant.Activities" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -90,6 +105,9 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.tprestaurant.Activities" />
+      <recent name="com.example.tprestaurant" />
+    </key>
+    <key name="android.template.2101243615">
       <recent name="com.example.tprestaurant" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -107,7 +125,7 @@
     <key name="android.template.988684800">
       <recent name="com.example.tprestaurant" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
+    <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.tprestaurant.Activities" />
     </key>
   </component>
@@ -303,18 +321,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="747" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607644607498" />
-    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1608429772048">
+    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1608849426965">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1608429772048" />
+    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1608849426965" />
     <state x="290" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1608396989573">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="290" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1608396989573" />
-    <state x="464" y="232" width="441" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1608571576685">
+    <state x="464" y="232" width="441" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1608819105500">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="464" y="232" width="441" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1608571576685" />
+    <state x="464" y="232" width="441" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1608819105500" />
     <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1608396991866">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -327,10 +345,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="263" y="118" key="AndroidCreateResourceDirectoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1607354672178" />
-    <state x="526" y="120" key="AndroidCreateResourceFileDialog" timestamp="1607885643008">
+    <state x="526" y="120" key="AndroidCreateResourceFileDialog" timestamp="1608845427512">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="526" y="120" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1607885643008" />
+    <state x="526" y="120" key="AndroidCreateResourceFileDialog/0.0.1366.728@0.0.1366.728" timestamp="1608845427512" />
     <state x="3" y="0" key="CommitChangelistDialog2" timestamp="1607689474284">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -339,10 +357,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="58" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607689788839" />
-    <state x="771" y="103" key="FileChooserDialogImpl" timestamp="1608406527488">
+    <state x="771" y="103" key="FileChooserDialogImpl" timestamp="1608815521349">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="771" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608406527488" />
+    <state x="771" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1608815521349" />
     <state x="286" y="261" key="Github.ShareDialog" timestamp="1607687827552">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -351,22 +369,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="115" y="69" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607687841477" />
-    <state width="1323" height="132" key="GridCell.Tab.0.bottom" timestamp="1608762742433">
+    <state width="1323" height="155" key="GridCell.Tab.0.bottom" timestamp="1608854426389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="132" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608762742433" />
-    <state width="1323" height="132" key="GridCell.Tab.0.center" timestamp="1608762742433">
+    <state width="1323" height="155" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1608854426389" />
+    <state width="1323" height="155" key="GridCell.Tab.0.center" timestamp="1608854426389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="132" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608762742433" />
-    <state width="1323" height="132" key="GridCell.Tab.0.left" timestamp="1608762742432">
+    <state width="1323" height="155" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1608854426389" />
+    <state width="1323" height="155" key="GridCell.Tab.0.left" timestamp="1608854426389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="132" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608762742432" />
-    <state width="1323" height="132" key="GridCell.Tab.0.right" timestamp="1608762742433">
+    <state width="1323" height="155" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1608854426389" />
+    <state width="1323" height="155" key="GridCell.Tab.0.right" timestamp="1608854426389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="132" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608762742433" />
+    <state width="1323" height="155" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1608854426389" />
     <state x="111" y="69" key="RollbackChangesDialog" timestamp="1608764556197">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -375,10 +393,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="450" y="17" width="916" height="711" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1608040079762" />
-    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2" timestamp="1608764603662">
+    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2" timestamp="1608765185050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608764603662" />
+    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1608765185050" />
     <state x="832" y="143" key="chooseDestDirectoryDialog" timestamp="1608384817208">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

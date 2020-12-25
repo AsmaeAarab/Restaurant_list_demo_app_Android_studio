@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">TPRestaurant</string>
     <string name="title_activity_maps">Map</string>
+    <string name="reductionMsg">vous bénificier de reduction de </string>
 </resources>

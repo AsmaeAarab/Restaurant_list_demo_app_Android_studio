@@ -4,19 +4,18 @@ import android.Manifest;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.location.Location;
 import android.location.LocationManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
-import com.example.tprestaurant.FetchURL;
-import com.example.tprestaurant.ItineraireTask;
+import com.example.tprestaurant.DialogBox.DialogReductionMsg;
 import com.example.tprestaurant.Model.Restaurant;
 import com.example.tprestaurant.R;
 import com.example.tprestaurant.TaskLoadedCallback;
@@ -25,13 +24,20 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+import java.io.Serializable;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, TaskLoadedCallback {
 
@@ -40,6 +46,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     MarkerOptions mMarkerGoal=null;
     MarkerOptions mMarkerStart=null;
     private Polyline currentPolyline;
+    private int reduction;
+    private View viewbox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,5 +162,52 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             return;
         }
         startActivity(call);
+    }
+    @OnClick(R.id.afficherMenu_btn)
+    public void AfficherMenu(){
+        getSelectedRestaurant = (Restaurant) getIntent().getSerializableExtra("SelectedRestaurant");
+            Intent menuLayout = new Intent(MapsActivity.this, MenuActivity.class);
+           // menuLayout.putExtra("menu", MenuData.MenuPizza(1));
+        Toast.makeText(getApplicationContext(), "retaurant category: "+getSelectedRestaurant.getIdCategory(), Toast.LENGTH_SHORT).show();
+            menuLayout.putExtra("Restaurant", (Serializable)getSelectedRestaurant);
+            startActivity(menuLayout);
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
+        reduction=0;
+        if(result != null){
+            if(result.getContents() == null)
+            {
+                Toast.makeText(this,"result not found",Toast.LENGTH_LONG).show();
+            }else{
+                try{
+                    JSONObject obj=new JSONObject(result.getContents());
+                    reduction=Integer.parseInt(obj.getString("reduction"));
+                    Toast.makeText(this,"le code de reduction: "+obj.getString("code"),Toast.LENGTH_LONG).show();
+
+                }catch (JSONException e){
+                    Toast.makeText(this,"QR code est invalide",Toast.LENGTH_LONG).show();//"le code de reduction: "+result.getContents()
+                }
+            }
+        }else {
+            super.onActivityResult(requestCode, resultCode, data);
+        }
+
+    }
+
+    @OnClick(R.id.ScanCodeQR_btn)
+    public void ScannerCodeQR(View view){
+         IntentIntegrator qrScan = new IntentIntegrator(this);
+
+         if(reduction!=0)
+            openDialog(reduction);
+
+    }
+    public void openDialog(int reduction){
+        DialogReductionMsg dialogMsg = new DialogReductionMsg(reduction);
+        dialogMsg.show(getSupportFragmentManager(),"dialog message");
     }
 }
