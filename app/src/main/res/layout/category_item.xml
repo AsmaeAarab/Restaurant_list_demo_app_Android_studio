@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/categoryItemId"
     android:layout_width="match_parent"
     android:layout_height="110dp"
-    android:background="#E1D9D9"
+    android:layout_margin="3dp"
     android:orientation="vertical"
-    android:padding="3dp">
+    android:padding="3dp"
+    app:barrierMargin="0dp"
+    android:background="@drawable/grid_style">
 
     <ImageView
         android:id="@+id/image_Category"
@@ -19,8 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="bottom|center"
+        android:layout_margin="1dp"
         android:gravity="bottom|center"
-        android:paddingTop="5dp"
+        android:paddingTop="1dp"
         android:paddingBottom="0dp"
         android:textColor="@color/black" />
 

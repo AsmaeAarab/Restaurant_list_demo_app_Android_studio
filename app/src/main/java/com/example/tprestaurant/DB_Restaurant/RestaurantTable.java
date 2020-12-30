@@ -8,13 +8,20 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
 import android.location.LocationManager;
+import android.os.Build;
 import android.util.Log;
 
+import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 
 import com.example.tprestaurant.Model.Restaurant;
 
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 
 public class RestaurantTable {
     public static CategoryTable categoryTableClass = new CategoryTable();
@@ -115,22 +122,9 @@ public class RestaurantTable {
         values.put(latitudeRestaurant_column, restaurant.getLatitude());
         values.put(longitudeRestaurant_column, restaurant.getLongitude());
 
-        LocationManager lm = (LocationManager) context.getSystemService(context.LOCATION_SERVICE);
-        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
-            return;
-        }
-        Location currentLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
-        Location goalLocation = new Location("goalLocation");
-        float distance=currentLocation.distanceTo(goalLocation);
-        restaurant.setDistance(distance+" m");
-        values.put(distanceRestaurant_column, restaurant.getDistance());
+        //String distance = Float.toString(getDistance(context));
+       // restaurant.setDistance(distance+" m");
+       // values.put(distanceRestaurant_column, restaurant.getDistance());
         // Inserting Row
         db.insert(Table_Restaurant, null, values);
     }
@@ -152,5 +146,37 @@ public class RestaurantTable {
         }
 
         return restaurants;
+    }
+    public static float getDistance(Context context,double latitudeGoal,double longitudeGoal) {
+        //LocationManager lm = (LocationManager) context.getSystemService(context.LOCATION_SERVICE);
+        if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            // TODO: Consider calling
+            //    ActivityCompat#requestPermissions
+            // here to request the missing permissions, and then overriding
+            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+            //                                          int[] grantResults)
+            // to handle the case where the user grants the permission. See the documentation
+            // for ActivityCompat#requestPermissions for more details.
+            return 0;
+        }
+        LocationManager lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
+        Location currentLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+
+        Location goalLocation = new Location("goalLocation");
+        if (currentLocation != null) {
+            goalLocation.setLatitude(latitudeGoal);
+            goalLocation.setLongitude(longitudeGoal);
+            float distance = currentLocation.distanceTo(goalLocation);
+            return distance;
+        }
+        else
+            return 0;
+    }
+    @RequiresApi(api = Build.VERSION_CODES.O)
+    public static boolean getTime(){
+        Date currentTime = Calendar.getInstance().getTime();
+        if(currentTime.getHours()>=9 && currentTime.getHours()<=23)
+            return true; //open
+        return false;
     }
 }

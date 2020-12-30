@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:gravity="clip_vertical"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:paddingLeft="10dp"
     android:paddingRight="10dp">
 
@@ -14,16 +14,21 @@
         android:layout_gravity="left"
         android:layout_marginLeft="0dp"
         android:gravity="center|left"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:layout_weight="1"/>
 
     <TextView
         android:id="@+id/Meal_prix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
+        android:layout_gravity="center|right"
         android:layout_marginRight="0dp"
         android:gravity="center"
-        android:textColor="@color/black" />
+        android:textColor="#d9a793"
+        android:textSize="15dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="0dp"/>
 
 
 </LinearLayout>

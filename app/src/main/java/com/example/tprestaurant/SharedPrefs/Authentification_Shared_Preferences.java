@@ -1,10 +1,14 @@
 package com.example.tprestaurant.SharedPrefs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.tprestaurant.Activities.AcceuilActivity;
+import com.example.tprestaurant.Activities.LoginActivity;
 
 public class Authentification_Shared_Preferences {
     public static final String SHARED_PREFS = "sharedPrefs";
@@ -42,13 +46,22 @@ public class Authentification_Shared_Preferences {
         password.setText(passwordValue);
         // remember_me.setChecked(rememberMe_checked);
     }
-    public static void DestroyPrefs(Context context,EditText login, EditText password){
+    public static void DestroyPrefs(Context context){
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS,context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.clear();
         editor.apply();
-        updateViews(login,password,LoadLogin_value(context),LoadPassword_value(context));
+
         Toast.makeText(context,"Preferences ares destroyed",Toast.LENGTH_LONG).show();
+    }
+
+    public static boolean TesterUserSharedPrefPourRedirection(Context context){
+
+        if(!LoadLogin_value(context).isEmpty() && !LoadPassword_value(context).isEmpty())
+        {
+            return true;
+        }
+        return false;
     }
 
 }

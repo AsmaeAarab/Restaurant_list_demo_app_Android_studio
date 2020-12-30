@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-android:paddingLeft="10dp"
-android:paddingRight="10dp"
-tools:context=".Activities.MenuActivity">
-
-<ListView
-    android:id="@+id/list_menu"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp"></ListView>
+    android:background="#deecf9"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".Activities.MenuActivity">
+
+    <TextView
+        android:id="@+id/textviewMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="0dp"
+        android:paddingTop="5dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="5dp"
+        android:text="Menu"
+        android:textColor="#3C2477"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="0dp"
+        android:paddingTop="5dp"
+        android:paddingRight="0dp"
+        android:paddingBottom="5dp"
+        android:text="notre Menu"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <ListView
+        android:id="@+id/list_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"></ListView>
 
 </LinearLayout>

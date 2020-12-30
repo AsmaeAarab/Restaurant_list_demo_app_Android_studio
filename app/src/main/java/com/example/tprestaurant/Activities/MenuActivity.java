@@ -32,7 +32,8 @@ public class MenuActivity extends AppCompatActivity {
 //        TextView menu;
     @BindView(R.id.list_menu)
         ListView list_menu;
-
+    @BindView(R.id.textviewMenu)
+        TextView textviewMenu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +42,8 @@ public class MenuActivity extends AppCompatActivity {
 
      //   HashMap<String, String> menuSelected= (HashMap) getIntent().getSerializableExtra("menu");
       //  menu.setText(menuSelected.get("Margherita pizza"));
-
         Restaurant restaurant = (Restaurant) getIntent().getSerializableExtra("Restaurant");
+        textviewMenu.setText("Welcome to "+restaurant.getNomRestaurant());
 
         MenuOfPizaa.add(new Menu("Margherita pizza","42 dh",1));
         MenuOfPizaa.add(new Menu("BEEFY pizza","49 dh",1));
