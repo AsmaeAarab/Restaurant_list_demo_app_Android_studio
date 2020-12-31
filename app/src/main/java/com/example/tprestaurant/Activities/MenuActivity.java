@@ -3,20 +3,18 @@ package com.example.tprestaurant.Activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.tprestaurant.Adapters.CategoryAdapter;
 import com.example.tprestaurant.Adapters.MenuAdapter;
-import com.example.tprestaurant.Model.Menu;
+import com.example.tprestaurant.Model.MenuRestaurant;
 import com.example.tprestaurant.Model.Restaurant;
 import com.example.tprestaurant.R;
+import com.example.tprestaurant.fragments.Menubar;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,10 +22,10 @@ import butterknife.OnItemClick;
 
 public class MenuActivity extends AppCompatActivity {
     MenuAdapter adapter = null;
-    ArrayList<Menu> MenuOfPizaa = new ArrayList<Menu>();
-    ArrayList<Menu> MenuOfFastFood = new ArrayList<Menu>();
-    ArrayList<Menu> MenuOfTacos = new ArrayList<Menu>();
-    ArrayList<Menu> MenuOfMorocain = new ArrayList<Menu>();
+    ArrayList<MenuRestaurant> menuRestaurantOfPizaa = new ArrayList<MenuRestaurant>();
+    ArrayList<MenuRestaurant> menuRestaurantOfFastFood = new ArrayList<MenuRestaurant>();
+    ArrayList<MenuRestaurant> menuRestaurantOfTacos = new ArrayList<MenuRestaurant>();
+    ArrayList<MenuRestaurant> menuRestaurantOfMorocain = new ArrayList<MenuRestaurant>();
 //    @BindView(R.id.menu)
 //        TextView menu;
     @BindView(R.id.list_menu)
@@ -45,38 +43,43 @@ public class MenuActivity extends AppCompatActivity {
         Restaurant restaurant = (Restaurant) getIntent().getSerializableExtra("Restaurant");
         textviewMenu.setText("Welcome to "+restaurant.getNomRestaurant());
 
-        MenuOfPizaa.add(new Menu("Margherita pizza","42 dh",1));
-        MenuOfPizaa.add(new Menu("BEEFY pizza","49 dh",1));
-        MenuOfPizaa.add(new Menu("Poulet Sauce BBQ pizza","49 dh",1));
+        menuRestaurantOfPizaa.add(new MenuRestaurant("Margherita pizza","42 dh",1));
+        menuRestaurantOfPizaa.add(new MenuRestaurant("BEEFY pizza","49 dh",1));
+        menuRestaurantOfPizaa.add(new MenuRestaurant("Poulet Sauce BBQ pizza","49 dh",1));
 
-        MenuOfFastFood.add(new Menu("Zinger Classic Meal","47 dh",2));
-        MenuOfFastFood.add(new Menu("Zinger Supreme","42 dh",2));
-        MenuOfFastFood.add(new Menu("Light Crispy Strips","35 dh",2));
+        menuRestaurantOfFastFood.add(new MenuRestaurant("Zinger Classic Meal","47 dh",2));
+        menuRestaurantOfFastFood.add(new MenuRestaurant("Zinger Supreme","42 dh",2));
+        menuRestaurantOfFastFood.add(new MenuRestaurant("Light Crispy Strips","35 dh",2));
 
-        MenuOfTacos.add(new Menu("Tacos nuggets","42 dh",3));
-        MenuOfTacos.add(new Menu("Tacos poulet","49 dh",3));
-        MenuOfTacos.add(new Menu("Tacos swiss","49 dh",3));
+        menuRestaurantOfTacos.add(new MenuRestaurant("Tacos nuggets","42 dh",3));
+        menuRestaurantOfTacos.add(new MenuRestaurant("Tacos poulet","49 dh",3));
+        menuRestaurantOfTacos.add(new MenuRestaurant("Tacos swiss","49 dh",3));
 
-        MenuOfMorocain.add(new Menu("Couscous","42 dh",4));
-        MenuOfMorocain.add(new Menu("brauchette viande","49 dh",4));
-        MenuOfMorocain.add(new Menu("soupe marocaine (hrira)","49 dh",4));
+        menuRestaurantOfMorocain.add(new MenuRestaurant("Couscous","42 dh",4));
+        menuRestaurantOfMorocain.add(new MenuRestaurant("brauchette viande","49 dh",4));
+        menuRestaurantOfMorocain.add(new MenuRestaurant("soupe marocaine (hrira)","49 dh",4));
 
         if(restaurant.getIdCategory()==1){
-            adapter = new MenuAdapter(getApplicationContext(),R.layout.menu_item,MenuOfPizaa);
+            adapter = new MenuAdapter(getApplicationContext(),R.layout.menu_item, menuRestaurantOfPizaa);
         }
         if(restaurant.getIdCategory()==2){
-            adapter = new MenuAdapter(getApplicationContext(),R.layout.menu_item,MenuOfFastFood);
+            adapter = new MenuAdapter(getApplicationContext(),R.layout.menu_item, menuRestaurantOfFastFood);
         }
         if(restaurant.getIdCategory()==3){
-            adapter = new MenuAdapter(getApplicationContext(),R.layout.menu_item,MenuOfTacos);
+            adapter = new MenuAdapter(getApplicationContext(),R.layout.menu_item, menuRestaurantOfTacos);
         }
         if(restaurant.getIdCategory()==4){
-            adapter = new MenuAdapter(getApplicationContext(),R.layout.menu_item,MenuOfMorocain);
+            adapter = new MenuAdapter(getApplicationContext(),R.layout.menu_item, menuRestaurantOfMorocain);
         }
 
     // menu.setText(MenuOfMorocain.get(0).getMeal_Name());
        // adapter = new MenuAdapter(getApplicationContext(),R.layout.menu_item,MenuOfMorocain);
         list_menu.setAdapter(adapter);
+
+        Menubar newFragmentDynamic = new Menubar();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.menu_bar,newFragmentDynamic).commit();
     }
     @OnItemClick(R.id.list_menu)
     public void clickbtn(int position){

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class RestaurantDbHelper extends SQLiteOpenHelper {
     public Context context;
-    public static final int Db_Version = 1;
+    public static final int Db_Version = 2;
     public static final String TAG = "Database Restaurant";
     public static final String Db_Name = "Restaurant";
 

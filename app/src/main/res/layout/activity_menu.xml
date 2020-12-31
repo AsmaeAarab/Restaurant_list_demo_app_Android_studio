@@ -9,7 +9,13 @@
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
     tools:context=".Activities.MenuActivity">
-
+    <LinearLayout
+        android:id="@+id/menu_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="right">
+    </LinearLayout>
     <TextView
         android:id="@+id/textviewMenu"
         android:layout_width="match_parent"

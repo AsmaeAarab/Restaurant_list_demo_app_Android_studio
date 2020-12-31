@@ -27,6 +27,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.tprestaurant.Activities.MenuActivity;
+import com.example.tprestaurant.Cheked_permession_fonction.Permission_fonction;
 import com.example.tprestaurant.DialogBox.DialogReductionMsg;
 import com.example.tprestaurant.Model.Restaurant;
 import com.example.tprestaurant.R;
@@ -73,6 +74,7 @@ Context contextDuFragement;
         View view= inflater.inflate(R.layout.fragment_fct_restaurant, container, false);
         ButterKnife.bind(this,view);
         contextDuFragement=view.getContext();
+        getSelectedRestaurant = (Restaurant) getArguments().getSerializable("getSelectedRestaurant");
         return view;
     }
 
@@ -94,39 +96,52 @@ Context contextDuFragement;
         Geocoder geocoder;
         List<Address> addresses;
         String address="";
-        geocoder = new Geocoder(contextDuFragement, Locale.getDefault());
-        getSelectedRestaurant = (Restaurant) getArguments().getSerializable("getSelectedRestaurant");
-        LatLng sydney = new LatLng(getSelectedRestaurant.getLatitude(), getSelectedRestaurant.getLongitude());
+        if(Permission_fonction.isNetworkConnected(contextDuFragement)) {
+            if (Permission_fonction.VerifyGPS(contextDuFragement)) {
+                geocoder = new Geocoder(contextDuFragement, Locale.getDefault());
+              //  getSelectedRestaurant = (Restaurant) getArguments().getSerializable("getSelectedRestaurant");
+                LatLng sydney = new LatLng(getSelectedRestaurant.getLatitude(), getSelectedRestaurant.getLongitude());
 
-        try {
-            addresses = geocoder.getFromLocation(getSelectedRestaurant.getLatitude(),getSelectedRestaurant.getLongitude(), 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
-            address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
-            String city = addresses.get(0).getLocality();
-            String state = addresses.get(0).getAdminArea();
-            String country = addresses.get(0).getCountryName();
-            String postalCode = addresses.get(0).getPostalCode();
-            String knownName = addresses.get(0).getFeatureName(); // Only if available else return NULL
-        }catch (Exception e){
+                try {
+                    addresses = geocoder.getFromLocation(getSelectedRestaurant.getLatitude(),getSelectedRestaurant.getLongitude(), 1); // Here 1 represent max location result to returned, by documents it recommended 1 to 5
+                    address = addresses.get(0).getAddressLine(0); // If any additional address line present than only, check with max available address lines by getMaxAddressLineIndex()
+                    String city = addresses.get(0).getLocality();
+                    String state = addresses.get(0).getAdminArea();
+                    String country = addresses.get(0).getCountryName();
+                    String postalCode = addresses.get(0).getPostalCode();
+                    String knownName = addresses.get(0).getFeatureName(); // Only if available else return NULL
+                }catch (Exception e){
 
-        }
+                }
 
-        try {
-            Uri uri = Uri.parse("http://maps.google.com/maps?saddr="+getCurrentLocation().latitude+","+getCurrentLocation().longitude+"&daddr="+address);
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            intent.setPackage("com.google.android.apps.maps");
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-        }catch (ActivityNotFoundException e){
-            Uri uri = Uri.parse("https://www.google.com/store/apps/details?id=com.google.android.apps.maps");
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
-        }
+                try {
+                    Uri uri = Uri.parse("http://maps.google.com/maps?saddr="+getCurrentLocation().latitude+","+getCurrentLocation().longitude+"&daddr="+address);
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    intent.setPackage("com.google.android.apps.maps");
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }catch (ActivityNotFoundException e){
+                    Uri uri = Uri.parse("https://www.google.com/store/apps/details?id=com.google.android.apps.maps");
+                    Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                }
+            }else {
+                    Toast.makeText(contextDuFragement,"turn on your GPS please",Toast.LENGTH_LONG).show();
+                }
+            }
+            else{
+                Toast.makeText(contextDuFragement,"turn on your wifi please",Toast.LENGTH_LONG).show();
+                Permission_fonction.VerifyInternet(contextDuFragement);
+            }
+
+
     }
 
     @OnClick(R.id.appeler_btn)
     public void AppelerRestaurant(){
-        Uri teleNum = Uri.parse("tel:0600000000");
+
+        Uri teleNum = Uri.parse("tel:"+getSelectedRestaurant.getTel());
         Intent call = new Intent(Intent.ACTION_CALL,teleNum);
         if (ActivityCompat.checkSelfPermission(contextDuFragement, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED){
             return;
@@ -160,7 +175,7 @@ Context contextDuFragement;
 
     @OnClick(R.id.afficherMenu_btn)
     public void AfficherMenu(){
-        getSelectedRestaurant = (Restaurant) getArguments().getSerializable("getSelectedRestaurant");
+     //   getSelectedRestaurant = (Restaurant) getArguments().getSerializable("getSelectedRestaurant");
         Intent menuLayout = new Intent(contextDuFragement, MenuActivity.class);
         // menuLayout.putExtra("menu", MenuData.MenuPizza(1));
         Toast.makeText(contextDuFragement, "retaurant category: "+getSelectedRestaurant.getIdCategory(), Toast.LENGTH_SHORT).show();

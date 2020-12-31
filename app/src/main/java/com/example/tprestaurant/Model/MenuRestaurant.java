@@ -2,7 +2,7 @@ package com.example.tprestaurant.Model;
 
 import java.io.Serializable;
 
-public class Menu implements Serializable {
+public class MenuRestaurant implements Serializable {
     private String meal_Name;
     private String meal_prix;
     private Integer idRestaurant;
@@ -23,7 +23,7 @@ public class Menu implements Serializable {
         this.meal_prix = meal_prix;
     }
 
-    public Menu(String meal_Name, String meal_prix, Integer idRestaurant) {
+    public MenuRestaurant(String meal_Name, String meal_prix, Integer idRestaurant) {
         this.meal_Name = meal_Name;
         this.meal_prix = meal_prix;
         this.idRestaurant = idRestaurant;

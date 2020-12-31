@@ -77,7 +77,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        Toast.makeText(this, "coucou from " + getSelectedRestaurant.getLatitude() + " , " + getSelectedRestaurant.getLongitude(), Toast.LENGTH_SHORT).show();
         // Add a marker in Sydney and move the camera
         LatLng sydney = new LatLng(getSelectedRestaurant.getLatitude(), getSelectedRestaurant.getLongitude());
         mMap.addMarker(new MarkerOptions().position(sydney).title(getSelectedRestaurant.getNomRestaurant()));

@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -14,9 +15,14 @@ import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.GridView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -73,16 +79,6 @@ public class AcceuilActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
-        // VerifyInternet();
-        //VerifyGPS();
-        //if(isNetworkConnected()){
-        //  VerifyGPS();
-        //}
-        //else{
-        //  Toast.makeText(getApplicationContext(),"turn on you wifi please",Toast.LENGTH_LONG).show();
-        //VerifyInternet();
-        //}
     }
 
     public boolean VerifyGPS(){
@@ -126,12 +122,10 @@ public class AcceuilActivity extends AppCompatActivity {
         RestaurantDbHelper db = new RestaurantDbHelper(getApplicationContext());
         Category Clicked_category = (Category) Categories_List.getItemAtPosition(position);
         Clicked_category = db.getCategory(Clicked_category.getTitre());
-        //Toast.makeText(getApplicationContext(),"coucou item "+Clicked_category.getTitre() , Toast.LENGTH_LONG).show();
         Intent restaurant_list_intent = new Intent(AcceuilActivity.this, Restaurant_Liste_Activity.class);
         restaurant_list_intent.putExtra("Clicked_category", (Serializable) Clicked_category);
-        //restaurant_list_intent.putExtra("currentLocation",(Serializable)currentLocation);
         startActivity(restaurant_list_intent);
-        this.finish();
+       // this.finish();
          }else {
          Toast.makeText(getApplicationContext(),"turn on your GPS please",Toast.LENGTH_LONG).show();
            }
@@ -140,6 +134,6 @@ public class AcceuilActivity extends AppCompatActivity {
           Toast.makeText(getApplicationContext(),"turn on your wifi please",Toast.LENGTH_LONG).show();
         VerifyInternet();
     }
-
 }
+
 }

@@ -6,9 +6,13 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -32,8 +36,6 @@ import butterknife.OnClick;
 public class Menubar extends Fragment {
 
     private Context contextDuFragement;
-    @BindView(R.id.logOut)
-    Button logOut;
 
     public Menubar() {
         // Required empty public constructor
@@ -56,18 +58,30 @@ public class Menubar extends Fragment {
         View view= inflater.inflate(R.layout.fragment_menubar, container, false);
         ButterKnife.bind(this,view);
         contextDuFragement=view.getContext();
+        setHasOptionsMenu(true);
         return view;
     }
-
-    @OnClick(R.id.logOut)
-    public void OnlogoutClick(){
-        Authentification_Shared_Preferences.DestroyPrefs(contextDuFragement);
-        redirectVersLoginPage();
+    @Override
+    public void onCreateOptionsMenu(Menu menu,MenuInflater in) {
+        in.inflate(R.menu.menu_bar,menu);
+        super.onCreateOptionsMenu(menu,in);
     }
-    public void redirectVersLoginPage(){
-        //updateViews(login,password,LoadLogin_value(context),LoadPassword_value(context));
-        Intent loginpage = new Intent(contextDuFragement, LoginActivity.class);
-        startActivity(loginpage);//redirection vers la page login
-        //finish();
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+        if(id == R.id.home_icon){
+            Intent acceuilpage = new Intent(contextDuFragement, AcceuilActivity.class);
+            acceuilpage.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(acceuilpage);
+            getActivity().finish();
+        }
+        if (id == R.id.logOut){
+            Authentification_Shared_Preferences.DestroyPrefs(contextDuFragement);
+            Intent loginpage = new Intent(contextDuFragement, LoginActivity.class);
+
+            startActivity(loginpage);
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

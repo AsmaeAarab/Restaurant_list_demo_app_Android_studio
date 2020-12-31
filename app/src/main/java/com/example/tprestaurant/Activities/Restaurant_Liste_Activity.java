@@ -15,6 +15,7 @@ import com.example.tprestaurant.DB_Restaurant.RestaurantTable;
 import com.example.tprestaurant.Model.Category;
 import com.example.tprestaurant.Model.Restaurant;
 import com.example.tprestaurant.R;
+import com.example.tprestaurant.fragments.Menubar;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -50,10 +51,13 @@ public class Restaurant_Liste_Activity extends AppCompatActivity {
         }
         RestaurantAdapter adapter = new RestaurantAdapter(getApplicationContext(),R.layout.restaurant_item,restaurants);
         Restaurant_list.setAdapter(adapter);
+        Menubar newFragmentDynamic = new Menubar();
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.menu_bar,newFragmentDynamic).commit();
     }
     @OnItemClick(R.id.Restaurant_list)
     public void OnRestaurantItemClick(int position){
-        Toast.makeText(getApplicationContext(),"coucou from item "+position,Toast.LENGTH_LONG).show();
         Intent restaurantDetailsMaps = new Intent(Restaurant_Liste_Activity.this, MapsActivity.class);
         Restaurant selectedRestaurant = (Restaurant) Restaurant_list.getItemAtPosition(position);
         restaurantDetailsMaps.putExtra("SelectedRestaurant",(Serializable)selectedRestaurant);

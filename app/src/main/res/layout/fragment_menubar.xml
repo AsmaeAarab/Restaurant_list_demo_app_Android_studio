@@ -7,19 +7,4 @@
     android:orientation="vertical"
     tools:context=".fragments.Menubar">
 
-    <Button
-        android:id="@+id/logOut"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:background="@drawable/button_style"
-        android:drawableLeft="@drawable/logout_24"
-        android:drawablePadding="6dp"
-        android:pointerIcon="@drawable/logout"
-        android:text="Log Out"
-        android:layout_weight="1"
-        android:layout_gravity="right"
-        app:backgroundTint="#586a94"
-        android:textSize="10sp"/>
-
 </LinearLayout>

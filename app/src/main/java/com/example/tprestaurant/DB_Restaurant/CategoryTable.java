@@ -84,8 +84,8 @@ public class CategoryTable {
         try {
             if (cursor.moveToFirst()) {
                 do {
-                    int ImageId = R.drawable.android_platform;
-                    Log.i("image id", String.valueOf(ImageId));
+//                    int ImageId = R.drawable.android_platform;
+  //                  Log.i("image id", String.valueOf(ImageId));
                     // DrawableRes monDrawble = ContextCompat.getDrawable(, ImageId);
                     Category category = new Category(cursor.getInt(1), cursor.getString(2));// cursor.getInt(1)
                     categories.add(category);

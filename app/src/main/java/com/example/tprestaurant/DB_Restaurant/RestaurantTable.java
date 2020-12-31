@@ -29,14 +29,14 @@ public class RestaurantTable {
     private static final String Table_Restaurant = "restaurants";
     private static final String idRestaurant_column = "IdRestaurant";
     private static final String nameRestaurant_column = "NameRestaurant";
-    private static final String distanceRestaurant_column = "DistanceRestaurant";
+    private static final String telRestaurant_column = "TelRestaurant";
     private static final String statutRestaurant_column = "StatutRestaurant";
     private static final String iDCategoryRestaurant_column = "IDCategoryRestaurant";
     private static final String latitudeRestaurant_column = "LatitudeRestaurant_column";
     private static final String longitudeRestaurant_column = "LongitudeRestaurant_column";
     private static final String SQL_Create_Restaurant =
             "CREATE TABLE " + Table_Restaurant + " (" + idRestaurant_column + " INTEGER PRIMARY KEY AUTOINCREMENT, " + nameRestaurant_column + " TEXT, "
-                    + statutRestaurant_column + " TEXT, " + distanceRestaurant_column + " TEXT, " + iDCategoryRestaurant_column + " INTEGER, " +
+                    + statutRestaurant_column + " TEXT, " + telRestaurant_column + " TEXT, " + iDCategoryRestaurant_column + " INTEGER, " +
                     latitudeRestaurant_column + " float, " + longitudeRestaurant_column + " float, " +
                     "FOREIGN KEY(" + iDCategoryRestaurant_column + ") REFERENCES " + categoryTableClass.getTable_Categories() + "(" + categoryTableClass.getIdCategory_column() + "))";
 
@@ -57,7 +57,7 @@ public class RestaurantTable {
     }
 
     public static String getDistanceRestaurant_column() {
-        return distanceRestaurant_column;
+        return telRestaurant_column;
     }
 
     public static String getStatutRestaurant_column() {
@@ -83,21 +83,21 @@ public class RestaurantTable {
     public static void CreateDefaultRestaurants(SQLiteDatabase db,Context context) {
         int count = getCountRestaurants(db);
         if (count == 0) {
-            addRestaurant(db, new Restaurant("IL Forno - Restaurant italien & Pizzeria", "ouvert", "500", 1, 34.25531, -6.58355),context);
-            addRestaurant(db, new Restaurant("Domino's Pizza", "fermé", "500", 1, 34.25363, -6.58066),context);
-            addRestaurant(db, new Restaurant("So Pizza Kenitra", "ouvert", "500", 1, 34.26198, -6.58406),context);
+            addRestaurant(db, new Restaurant("IL Forno - Restaurant italien & Pizzeria", "ouvert", "500", 1, 34.25531, -6.58355,"0600000001"),context);
+            addRestaurant(db, new Restaurant("Domino's Pizza", "fermé", "500", 1, 34.25363, -6.58066,"0600000002"),context);
+            addRestaurant(db, new Restaurant("So Pizza Kenitra", "ouvert", "500", 1, 34.26198, -6.58406,"0600000003"),context);
 
-            addRestaurant(db, new Restaurant("Espace Bahij Fast Food", "ouvert", "500", 2, 34.26108, -6.58610),context);
-            addRestaurant(db, new Restaurant("McDonald's kénitra", "ouvert", "500", 2, 34.25041, -6.57263),context);
-            addRestaurant(db, new Restaurant("KFC", "ouvert", "500", 2, 34.26057, -6.58289),context);
+            addRestaurant(db, new Restaurant("Espace Bahij Fast Food", "ouvert", "500", 2, 34.26108, -6.58610,"0600000004"),context);
+            addRestaurant(db, new Restaurant("McDonald's kénitra", "ouvert", "500", 2, 34.25041, -6.57263,"0600000005"),context);
+            addRestaurant(db, new Restaurant("KFC", "ouvert", "500", 2, 34.26057, -6.58289,"0600000006"),context);
 
-            addRestaurant(db, new Restaurant("Kwik One Tacos", "ouvert", "500", 3, 34.25986, -6.58812),context);
-            addRestaurant(db, new Restaurant("Anzi Tacos", "ouvert", "500", 3, 34.25958, -6.58539),context);
-            addRestaurant(db, new Restaurant("Step Burger", "ouvert", "500", 3, 34.26188, -6.58440),context);
+            addRestaurant(db, new Restaurant("Kwik One Tacos", "ouvert", "500", 3, 34.25986, -6.58812,"0600000007"),context);
+            addRestaurant(db, new Restaurant("Anzi Tacos", "ouvert", "500", 3, 34.25958, -6.58539,"0600000008"),context);
+            addRestaurant(db, new Restaurant("Step Burger", "ouvert", "500", 3, 34.26188, -6.58440,"0600000009"),context);
 
-            addRestaurant(db, new Restaurant("Chhiwate Ryad Naji", "ouvert", "500", 4, 34.26109, -6.57949),context);
-            addRestaurant(db, new Restaurant("Dar Tajine", "ouvert", "500", 4, 34.26289, -6.59243),context);
-            addRestaurant(db, new Restaurant("City Poisson", "ouvert", "500", 4, 34.26412, -6.58097),context);
+            addRestaurant(db, new Restaurant("Chhiwate Ryad Naji", "ouvert", "500", 4, 34.26109, -6.57949,"0600000010"),context);
+            addRestaurant(db, new Restaurant("Dar Tajine", "ouvert", "500", 4, 34.26289, -6.59243,"0600000011"),context);
+            addRestaurant(db, new Restaurant("City Poisson", "ouvert", "500", 4, 34.26412, -6.58097,"0600000012"),context);
 
         }
     }
@@ -121,11 +121,7 @@ public class RestaurantTable {
         values.put(iDCategoryRestaurant_column, restaurant.getIdCategory());
         values.put(latitudeRestaurant_column, restaurant.getLatitude());
         values.put(longitudeRestaurant_column, restaurant.getLongitude());
-
-        //String distance = Float.toString(getDistance(context));
-       // restaurant.setDistance(distance+" m");
-       // values.put(distanceRestaurant_column, restaurant.getDistance());
-        // Inserting Row
+        values.put(telRestaurant_column, restaurant.getTel());
         db.insert(Table_Restaurant, null, values);
     }
     public static ArrayList<Restaurant> getRestaurantByCathegory(SQLiteDatabase db, Integer idCategory){
@@ -135,7 +131,7 @@ public class RestaurantTable {
         try {
             if (cursor.moveToFirst()) {
                 do {
-                    Restaurant restaurant_item= new Restaurant(cursor.getString(1),cursor.getString(2),cursor.getString(3),cursor.getInt(4),cursor.getDouble(5), cursor.getDouble(6));
+                    Restaurant restaurant_item= new Restaurant(cursor.getString(1),cursor.getString(2),"",cursor.getInt(4),cursor.getDouble(5), cursor.getDouble(6),cursor.getString(3));
                     restaurants.add(restaurant_item);
                 } while (cursor.moveToNext());
             }

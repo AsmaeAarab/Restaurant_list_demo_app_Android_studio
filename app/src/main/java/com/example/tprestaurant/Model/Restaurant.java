@@ -10,13 +10,15 @@ public class Restaurant implements Serializable {
     private Integer idCategory;
     private double longitude;
     private double latitude;
-    public Restaurant(String nomRestaurant, String statutRestaurant, String distance,Integer idCategory,double latitude,double longitude) {
+    private String tel;
+    public Restaurant(String nomRestaurant, String statutRestaurant, String distance,Integer idCategory,double latitude,double longitude,String tel) {
         this.nomRestaurant = nomRestaurant;
         this.statutRestaurant = statutRestaurant;
         this.distance = distance;
         this.idCategory = idCategory;
         this.latitude = latitude;
         this.longitude = longitude;
+        this.tel=tel;
     }
 
     public Integer getIdRestaurant() {
@@ -73,5 +75,13 @@ public class Restaurant implements Serializable {
 
     public void setIdCategory(Integer idCategory) {
         this.idCategory = idCategory;
+    }
+
+    public String getTel() {
+        return tel;
+    }
+
+    public void setTel(String tel) {
+        this.tel = tel;
     }
 }
