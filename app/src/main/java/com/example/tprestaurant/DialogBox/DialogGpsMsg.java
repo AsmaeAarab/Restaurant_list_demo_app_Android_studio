@@ -22,8 +22,8 @@ import com.example.tprestaurant.Activities.LoginActivity;
 import com.example.tprestaurant.R;
 
 public class DialogGpsMsg extends AppCompatDialogFragment {
-Context context;
-    LocationManager manager=null ;
+    Context context;
+
     public  DialogGpsMsg(Context context){
         this.context=context;
     }
@@ -45,7 +45,7 @@ Context context;
         return builder.create();
     }
 
-    public void addNotification(){
+/*    public void addNotification(){
 
         Intent intent = new Intent(context, androidx.appcompat.app.AlertDialog.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
@@ -62,5 +62,5 @@ Context context;
         NotificationManagerCompat notificationManager = NotificationManagerCompat
                 .from(context);
         notificationManager.notify(1,mBuilder.build());
-    }
+    }*/
 }

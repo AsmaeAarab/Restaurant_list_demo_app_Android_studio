@@ -36,7 +36,7 @@ public class Permission_fonction {
         }
         else
         {
-            msgGpsError.addNotification();
+          //  msgGpsError.addNotification();
             return true;
         }
 

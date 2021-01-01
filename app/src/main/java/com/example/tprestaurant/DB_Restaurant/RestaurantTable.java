@@ -7,24 +7,24 @@ import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
+import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Build;
 import android.util.Log;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 
 import com.example.tprestaurant.Model.Restaurant;
 
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
-public class RestaurantTable {
+public class RestaurantTable implements LocationListener {
     public static CategoryTable categoryTableClass = new CategoryTable();
+    static Location currentLocation;
 
     private static final String Table_Restaurant = "restaurants";
     private static final String idRestaurant_column = "IdRestaurant";
@@ -83,7 +83,10 @@ public class RestaurantTable {
     public static void CreateDefaultRestaurants(SQLiteDatabase db,Context context) {
         int count = getCountRestaurants(db);
         if (count == 0) {
-            addRestaurant(db, new Restaurant("IL Forno - Restaurant italien & Pizzeria", "ouvert", "500", 1, 34.25531, -6.58355,"0600000001"),context);
+            Restaurant restaurant = new Restaurant("IL Forno - Restaurant italien & Pizzeria", "ouvert", "500", 1, 34.25531, -6.58355,"0600000001");
+            addRestaurant(db, restaurant, context);
+            //restaurant.setIdRestaurant(55);
+
             addRestaurant(db, new Restaurant("Domino's Pizza", "fermé", "500", 1, 34.25363, -6.58066,"0600000002"),context);
             addRestaurant(db, new Restaurant("So Pizza Kenitra", "ouvert", "500", 1, 34.26198, -6.58406,"0600000003"),context);
 
@@ -114,9 +117,7 @@ public class RestaurantTable {
 
     public static void addRestaurant(SQLiteDatabase db, Restaurant restaurant, Context context) {
         ContentValues values = new ContentValues();
-        values.put(idRestaurant_column, restaurant.getIdRestaurant());
         values.put(nameRestaurant_column, restaurant.getNomRestaurant());
-
         values.put(statutRestaurant_column, restaurant.getStatutRestaurant());
         values.put(iDCategoryRestaurant_column, restaurant.getIdCategory());
         values.put(latitudeRestaurant_column, restaurant.getLatitude());
@@ -132,6 +133,7 @@ public class RestaurantTable {
             if (cursor.moveToFirst()) {
                 do {
                     Restaurant restaurant_item= new Restaurant(cursor.getString(1),cursor.getString(2),"",cursor.getInt(4),cursor.getDouble(5), cursor.getDouble(6),cursor.getString(3));
+                    restaurant_item.setIdRestaurant(cursor.getInt(0));
                     restaurants.add(restaurant_item);
                 } while (cursor.moveToNext());
             }
@@ -143,20 +145,31 @@ public class RestaurantTable {
 
         return restaurants;
     }
-    public static float getDistance(Context context,double latitudeGoal,double longitudeGoal) {
-        //LocationManager lm = (LocationManager) context.getSystemService(context.LOCATION_SERVICE);
+
+    public static Restaurant getRestaurantById(SQLiteDatabase db,int id){
+        Restaurant restaurant = null;
+        String query = "SELECT * FROM "+Table_Restaurant +" WHERE "+idRestaurant_column+"="+id;
+        Cursor cursor = db.rawQuery(query,null);
+        try {
+            if (cursor != null)
+                cursor.moveToFirst();
+            restaurant = new Restaurant(cursor.getString(1),cursor.getString(2),"",cursor.getInt(4),cursor.getDouble(5), cursor.getDouble(6),cursor.getString(3));
+            restaurant.setIdRestaurant(cursor.getInt(0));
+        } catch (Exception e) {
+            return null;
+        } finally {
+            cursor.close();
+        }
+        return restaurant;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public static float getDistance(Context context, double latitudeGoal, double longitudeGoal) {
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(context, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            // TODO: Consider calling
-            //    ActivityCompat#requestPermissions
-            // here to request the missing permissions, and then overriding
-            //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
-            //                                          int[] grantResults)
-            // to handle the case where the user grants the permission. See the documentation
-            // for ActivityCompat#requestPermissions for more details.
             return 0;
         }
         LocationManager lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
-        Location currentLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+         currentLocation = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER);
 
         Location goalLocation = new Location("goalLocation");
         if (currentLocation != null) {
@@ -168,6 +181,12 @@ public class RestaurantTable {
         else
             return 0;
     }
+    @Override
+    public void onLocationChanged(@NonNull Location location) {
+        currentLocation.setLatitude(location.getLatitude());
+        currentLocation.setLongitude(location.getLongitude());
+    }
+
     @RequiresApi(api = Build.VERSION_CODES.O)
     public static boolean getTime(){
         Date currentTime = Calendar.getInstance().getTime();
@@ -175,4 +194,5 @@ public class RestaurantTable {
             return true; //open
         return false;
     }
+
 }

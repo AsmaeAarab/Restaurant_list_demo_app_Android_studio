@@ -9,23 +9,24 @@ import androidx.annotation.Nullable;
 
 import com.example.tprestaurant.Model.Authentification;
 import com.example.tprestaurant.Model.Category;
+import com.example.tprestaurant.Model.MenuOfRestaurant;
 import com.example.tprestaurant.Model.Restaurant;
 
 import java.util.ArrayList;
 
-public class RestaurantDbHelper extends SQLiteOpenHelper {
+public class GlobalDbHelper extends SQLiteOpenHelper {
     public Context context;
-    public static final int Db_Version = 2;
+    public static final int Db_Version = 1;
     public static final String TAG = "Database Restaurant";
     public static final String Db_Name = "Restaurant";
 
     /* contructors */
-    public RestaurantDbHelper(Context context) {
+    public GlobalDbHelper(Context context) {
         super(context, Db_Name, null, Db_Version);
         this.context=context;
     }
 
-    public RestaurantDbHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public GlobalDbHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
     }
 
@@ -36,9 +37,11 @@ public class RestaurantDbHelper extends SQLiteOpenHelper {
         db.execSQL(AuthentificationTable.getSQL_Create_Authentification());
         db.execSQL(CategoryTable.getSQL_Create_Categories());
         db.execSQL(RestaurantTable.getSQL_Create_Restaurant());
+        db.execSQL(MenuItemsTable.getSQL_Create_MenuItems());
         AuthentificationTable.createDfaultAuthentification(db);
         CategoryTable.createDfaultcategories(db);
         RestaurantTable.CreateDefaultRestaurants(db,context);
+        MenuItemsTable.createDfaultItems(db);
         Log.d(TAG, "database created");
     }
 
@@ -52,6 +55,7 @@ public class RestaurantDbHelper extends SQLiteOpenHelper {
             db.execSQL("DROP TABLE IF EXISTS " + AuthentificationTable.getTable_Authentification());
             db.execSQL("DROP TABLE IF EXISTS " + CategoryTable.getTable_Categories());
             db.execSQL("DROP TABLE IF EXISTS " + RestaurantTable.getTable_Restaurant());
+            db.execSQL("DROP TABLE IF EXISTS "+MenuItemsTable.getTable_MenuItems());
             onCreate(db);
         }
     }
@@ -82,5 +86,16 @@ public class RestaurantDbHelper extends SQLiteOpenHelper {
     public ArrayList<Restaurant> getRestaurantByCathegory(Integer idCategory){
         SQLiteDatabase db = this.getReadableDatabase();
         return RestaurantTable.getRestaurantByCathegory(db,idCategory);
+    }
+
+    public Restaurant getRestaurantById(int id){
+        SQLiteDatabase db=this.getReadableDatabase();
+        return  RestaurantTable.getRestaurantById(db, id);
+    }
+
+    /* MenuItems table fonctions*/
+    public ArrayList<MenuOfRestaurant> getMenutemsByRestaurant(int idRestauant){
+        SQLiteDatabase db = this.getReadableDatabase();
+        return MenuItemsTable.getAllItemsByRestaurant(db,idRestauant);
     }
 }

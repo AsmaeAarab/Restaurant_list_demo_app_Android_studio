@@ -6,7 +6,6 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -15,35 +14,30 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.tprestaurant.Activities.AcceuilActivity;
 import com.example.tprestaurant.Activities.LoginActivity;
 import com.example.tprestaurant.R;
 import com.example.tprestaurant.SharedPrefs.Authentification_Shared_Preferences;
 
-import java.util.ArrayList;
-
-import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link Menubar#newInstance} factory method to
+ * Use the {@link Toolbar#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Menubar extends Fragment {
+public class Toolbar extends Fragment {
 
     private Context contextDuFragement;
 
-    public Menubar() {
+    public Toolbar() {
         // Required empty public constructor
     }
 
     // TODO: Rename and change types and number of parameters
-    public static Menubar newInstance(String param1, String param2) {
-        Menubar fragment = new Menubar();
+    public static Toolbar newInstance(String param1, String param2) {
+        Toolbar fragment = new Toolbar();
         return fragment;
     }
 
@@ -79,7 +73,7 @@ public class Menubar extends Fragment {
         if (id == R.id.logOut){
             Authentification_Shared_Preferences.DestroyPrefs(contextDuFragement);
             Intent loginpage = new Intent(contextDuFragement, LoginActivity.class);
-
+            loginpage.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             startActivity(loginpage);
         }
         return super.onOptionsItemSelected(item);

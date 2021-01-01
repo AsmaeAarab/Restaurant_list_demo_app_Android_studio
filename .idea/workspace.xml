@@ -36,53 +36,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bfe8f87-05e8-4f8d-8e4e-fc9a360585b6" name="Default Changelist" comment="finalisation (stable etat)">
-      <change afterPath="$PROJECT_DIR$/app/src/main/ic_launcher_icon_new-playstore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Cheked_permession_fonction/Permission_fonction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_launcher_icon_new_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icon_exit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icon_home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/icon_restaurant.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/menu/menu_bar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_icon_new.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-anydpi-v26/ic_launcher_icon_new_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_icon_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_icon_new_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_icon_new_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_icon_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_icon_new_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_icon_new_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_icon_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_icon_new_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_icon_new_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_icon_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_icon_new_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_icon_new_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_icon_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_icon_new_foreground.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_icon_new_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MenuOfRestaurantActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/MenuItemsTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/qrCode_Samples/Qrcode_wikipedia_fr_v2clean.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/AcceuilActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/AcceuilActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/LoginActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MapsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MenuActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MenuActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MenuActivity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/Notification.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/Restaurant_Liste_Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/Restaurant_Liste_Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/MenuAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/MenuAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/CategoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/CategoryAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/MenuAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/MenuOfRestaurantAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/RestaurantAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/RestaurantAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Cheked_permession_fonction/Permission_fonction.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Cheked_permession_fonction/Permission_fonction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/AuthentificationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/AuthentificationTable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/CategoryTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/CategoryTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/RestaurantDbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/RestaurantDbHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/RestaurantDbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/GlobalDbHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/RestaurantTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/RestaurantTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Menu_Data/MenuData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Model/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Model/MenuRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Model/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Model/Restaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/FctRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/FctRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/Menubar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/Menubar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/android_platform.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logout.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logout_24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DataParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DialogBox/DialogGpsMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DialogBox/DialogGpsMsg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/FetchURL.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/ItineraireTask.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Model/MenuRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Model/MenuOfRestaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/PointsParser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/TaskLoadedCallback.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/FctRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/RestaurantAdditionalServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/Menubar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/Toolbar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fct_restaurant.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fct_restaurant.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_menubar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_menubar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/menu_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/menu_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/restaurant_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/restaurant_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,8 +102,8 @@
       <list>
         <option value="Interface" />
         <option value="layoutResourceFile" />
-        <option value="Class" />
         <option value="resourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -137,15 +122,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.example.tprestaurant.Activities" />
+    <key name="android.template.-570799942">
+      <recent name="com.example.tprestaurant" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.example.tprestaurant.Activities" />
+    <key name="android.template.-993679675">
+      <recent name="com.example.tprestaurant" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Aarab Asmae\AndroidStudioProjects\TPRestaurant\app\src\main\res\drawable" />
@@ -168,14 +153,14 @@
     <key name="android.template.2101243615">
       <recent name="com.example.tprestaurant" />
     </key>
-    <key name="android.template.-993679675">
-      <recent name="com.example.tprestaurant" />
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.example.tprestaurant.Activities" />
     </key>
     <key name="android.template.988684800">
       <recent name="com.example.tprestaurant" />
     </key>
-    <key name="android.template.-570799942">
-      <recent name="com.example.tprestaurant" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.tprestaurant.Activities" />
     </key>
   </component>
   <component name="RunManager">
@@ -378,10 +363,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="747" y="165" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607644607498" />
-    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1609375086400">
+    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1609466307341">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1609375086400" />
+    <state x="796" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1609466307341" />
     <state x="290" y="288" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1608396989573">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -394,14 +379,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="479" y="245" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1366.728@0.0.1366.728" timestamp="1608396991866" />
-    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609372121534">
+    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1609528255468">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1609372121534" />
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609380709447">
+    <state x="297" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1609528255468" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1609529634478">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609380709447" />
+    <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1609529634478" />
     <state x="263" y="118" key="AndroidCreateResourceDirectoryDialog" timestamp="1607354672178">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -418,10 +403,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="58" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1607689788839" />
-    <state x="771" y="103" key="FileChooserDialogImpl" timestamp="1609363817113">
+    <state x="771" y="103" key="FileChooserDialogImpl" timestamp="1609466648108">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="771" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609363817113" />
+    <state x="771" y="103" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1609466648108" />
     <state x="286" y="261" key="Github.ShareDialog" timestamp="1607687827552">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -430,22 +415,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="115" y="69" key="Github.UntrackedFilesDialog/0.0.1366.728@0.0.1366.728" timestamp="1607687841477" />
-    <state width="1323" height="187" key="GridCell.Tab.0.bottom" timestamp="1609380709583">
+    <state width="1323" height="25" key="GridCell.Tab.0.bottom" timestamp="1609527480810">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609380709583" />
-    <state width="1323" height="187" key="GridCell.Tab.0.center" timestamp="1609380709583">
+    <state width="1323" height="25" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1609527480810" />
+    <state width="1323" height="25" key="GridCell.Tab.0.center" timestamp="1609527480810">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609380709583" />
-    <state width="1323" height="187" key="GridCell.Tab.0.left" timestamp="1609380709583">
+    <state width="1323" height="25" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1609527480810" />
+    <state width="1323" height="25" key="GridCell.Tab.0.left" timestamp="1609527480810">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609380709583" />
-    <state width="1323" height="187" key="GridCell.Tab.0.right" timestamp="1609380709583">
+    <state width="1323" height="25" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1609527480810" />
+    <state width="1323" height="25" key="GridCell.Tab.0.right" timestamp="1609527480810">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609380709583" />
+    <state width="1323" height="25" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1609527480810" />
     <state x="111" y="69" key="RollbackChangesDialog" timestamp="1608764556197">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -458,10 +443,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="468" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1609281189237" />
-    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2" timestamp="1609350890188">
+    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2" timestamp="1609381146899">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609350890188" />
+    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609381146899" />
     <state x="832" y="143" key="chooseDestDirectoryDialog" timestamp="1608856197799">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -478,10 +463,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="737" y="111" key="refactoring.ChangeSignatureDialog/0.0.1366.728@0.0.1366.728" timestamp="1609347048644" />
-    <state x="647" y="164" key="run.anything.popup" timestamp="1608471907721">
+    <state x="647" y="164" key="run.anything.popup" timestamp="1609461116291">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="647" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1608471907721" />
+    <state x="647" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1609461116291" />
     <state x="475" y="222" key="scopes" timestamp="1608393482644">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

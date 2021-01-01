@@ -38,35 +38,30 @@ public class AuthentificationTable {
 
     public static void createDfaultAuthentification(SQLiteDatabase db) {
         int count = getAuthCount(db);
-        Authentification auth;
         if (count == 0) {
-            auth = new Authentification("asmae", "123456");
-            addAuthentification(db, auth);
+            Authentification auth01 = new Authentification("asmae", "123456");
+            Authentification auth02 = new Authentification("admin", "admin");
+            addAuthentification(db, auth01);
+            addAuthentification(db, auth02);
         }
     }
 
     private static void addAuthentification(SQLiteDatabase db, Authentification auth) {
         Log.i(TAG, "MyDatabaseHelper.addNote ... " + auth.getLogin());
-
-        //SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(Login_column, auth.getLogin());
         values.put(Pswd_column, auth.getPswd());
         // Inserting Row
         db.insert(Table_Authentification, null, values);
-        // Closing database connection
-        //db.close();
     }
 
     private static int getAuthCount(SQLiteDatabase db) {
         Log.i("Auth", "MyDatabaseHelper.getNotesCount ... ");
         int count = -1;
         String countQuery = "SELECT  * FROM " + Table_Authentification;
-        //  SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(countQuery, null);
         if (cursor != null && !cursor.isClosed()) {
             count = cursor.getCount();
-            //   cursor.close();
         }
         return count;
     }

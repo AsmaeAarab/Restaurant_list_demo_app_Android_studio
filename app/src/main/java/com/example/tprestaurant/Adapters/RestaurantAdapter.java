@@ -26,7 +26,6 @@ public class RestaurantAdapter extends ArrayAdapter<Restaurant> {
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-       // return super.getView(position, convertView, parent);
         LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         convertView = inflater.inflate(R.layout.restaurant_item,parent,false);
 

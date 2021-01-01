@@ -7,15 +7,14 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.example.tprestaurant.Adapters.RestaurantAdapter;
-import com.example.tprestaurant.DB_Restaurant.RestaurantDbHelper;
+import com.example.tprestaurant.DB_Restaurant.GlobalDbHelper;
 import com.example.tprestaurant.DB_Restaurant.RestaurantTable;
 import com.example.tprestaurant.Model.Category;
 import com.example.tprestaurant.Model.Restaurant;
 import com.example.tprestaurant.R;
-import com.example.tprestaurant.fragments.Menubar;
+import com.example.tprestaurant.fragments.Toolbar;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -37,7 +36,7 @@ public class Restaurant_Liste_Activity extends AppCompatActivity {
 
         Category category =  (Category)(getIntent().getSerializableExtra("Clicked_category"));
         ArrayList<Restaurant> restaurants = null;
-        RestaurantDbHelper db = new RestaurantDbHelper(getApplicationContext());
+        GlobalDbHelper db = new GlobalDbHelper(getApplicationContext());
         restaurants= db.getRestaurantByCathegory(category.getId());
 
         for (Restaurant rst:restaurants) {
@@ -51,7 +50,7 @@ public class Restaurant_Liste_Activity extends AppCompatActivity {
         }
         RestaurantAdapter adapter = new RestaurantAdapter(getApplicationContext(),R.layout.restaurant_item,restaurants);
         Restaurant_list.setAdapter(adapter);
-        Menubar newFragmentDynamic = new Menubar();
+        Toolbar newFragmentDynamic = new Toolbar();
         getSupportFragmentManager()
                 .beginTransaction()
                 .add(R.id.menu_bar,newFragmentDynamic).commit();
@@ -59,6 +58,7 @@ public class Restaurant_Liste_Activity extends AppCompatActivity {
     @OnItemClick(R.id.Restaurant_list)
     public void OnRestaurantItemClick(int position){
         Intent restaurantDetailsMaps = new Intent(Restaurant_Liste_Activity.this, MapsActivity.class);
+        GlobalDbHelper db = new GlobalDbHelper(getApplicationContext());
         Restaurant selectedRestaurant = (Restaurant) Restaurant_list.getItemAtPosition(position);
         restaurantDetailsMaps.putExtra("SelectedRestaurant",(Serializable)selectedRestaurant);
         startActivity(restaurantDetailsMaps);

@@ -1,8 +1,6 @@
 package com.example.tprestaurant.Activities;
 
-import android.content.Context;
 import android.content.Intent;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.CheckBox;
@@ -11,8 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.tprestaurant.DB_Restaurant.RestaurantDbHelper;
-import com.example.tprestaurant.DialogBox.DialogGpsMsg;
+import com.example.tprestaurant.DB_Restaurant.GlobalDbHelper;
 import com.example.tprestaurant.Model.Authentification;
 import com.example.tprestaurant.R;
 import com.example.tprestaurant.SharedPrefs.Authentification_Shared_Preferences;
@@ -35,12 +32,8 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-            if(Authentification_Shared_Preferences.TesterUserSharedPrefPourRedirection(getApplicationContext())){
-                Intent acceuil = new Intent(LoginActivity.this,AcceuilActivity.class);
-                startActivity(acceuil);
-                finish();
-            }
-            else {
+
+        if(!Authentification_Shared_Preferences.TesterUserSharedPrefPourRedirection(getApplicationContext())) {
                 setContentView(R.layout.login_page);
                 ButterKnife.bind(this);
                 updateViews();
@@ -50,15 +43,17 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     public void onResume() {
-
+        if(Authentification_Shared_Preferences.TesterUserSharedPrefPourRedirection(getApplicationContext())){
+            Intent acceuil = new Intent(LoginActivity.this,AcceuilActivity.class);
+            startActivity(acceuil);
+            finish();
+        }
         super.onResume();
-        //onCreate(savedInstanceState);
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-      // VerifyGPS();
     }
 
     @Override
@@ -69,11 +64,11 @@ public class LoginActivity extends AppCompatActivity {
 
     @OnClick(R.id.submit)
     public void onSubmit(){
-        RestaurantDbHelper db = new RestaurantDbHelper(this);
+        GlobalDbHelper db = new GlobalDbHelper(this);
         Authentification auth = db.getAuth(login.getText().toString(), password.getText().toString());
         if(auth != null){
-            Toast.makeText(getApplicationContext(),"authentification reussie",Toast.LENGTH_LONG).show();
-            SaveLogin();//dans le shared pref
+            Toast.makeText(getApplicationContext(),"authentification réussie",Toast.LENGTH_LONG).show();
+            SaveLogin();//save at  shared pref
             Intent acceuil = new Intent(LoginActivity.this,AcceuilActivity.class);
             startActivity(acceuil);
             finish();

@@ -66,14 +66,12 @@ public class CategoryTable {
     private static void addCategory(SQLiteDatabase db, Category category) {
         Log.i(TAG, "MyDatabaseHelper.addNote ... " + category.getTitre());
 
-        // SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(imageCategory_column, category.getIdImage());
         values.put(titleCategory_column, category.getTitre());
-        // Inserting Row
+
         db.insert(Table_Categories, null, values);
-        // Closing database connection
-        //db.close();
+
     }
 
     public static ArrayList<Category> getAllCategories( SQLiteDatabase db) {
@@ -84,9 +82,6 @@ public class CategoryTable {
         try {
             if (cursor.moveToFirst()) {
                 do {
-//                    int ImageId = R.drawable.android_platform;
-  //                  Log.i("image id", String.valueOf(ImageId));
-                    // DrawableRes monDrawble = ContextCompat.getDrawable(, ImageId);
                     Category category = new Category(cursor.getInt(1), cursor.getString(2));// cursor.getInt(1)
                     categories.add(category);
                 } while (cursor.moveToNext());

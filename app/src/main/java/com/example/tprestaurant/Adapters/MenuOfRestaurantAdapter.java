@@ -10,17 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.tprestaurant.Model.MenuRestaurant;
+import com.example.tprestaurant.Model.MenuOfRestaurant;
 import com.example.tprestaurant.R;
 
 import java.util.ArrayList;
 
-public class MenuAdapter extends ArrayAdapter<MenuRestaurant> {
-    ArrayList <MenuRestaurant> menuRestaurantResource;
+public class MenuOfRestaurantAdapter extends ArrayAdapter<MenuOfRestaurant> {
+    ArrayList <MenuOfRestaurant> menuOfRestaurantResource;
 
-    public MenuAdapter(@NonNull Context context, int resource, ArrayList<MenuRestaurant> menuRestaurantResource) {
-        super(context, resource, menuRestaurantResource);
-        this.menuRestaurantResource = menuRestaurantResource;
+    public MenuOfRestaurantAdapter(@NonNull Context context, int resource, ArrayList<MenuOfRestaurant> menuOfRestaurantResource) {
+        super(context, resource, menuOfRestaurantResource);
+        this.menuOfRestaurantResource = menuOfRestaurantResource;
     }
     @NonNull
     @Override
@@ -29,10 +29,10 @@ public class MenuAdapter extends ArrayAdapter<MenuRestaurant> {
         convertView = inflater.inflate(R.layout.menu_item,parent,false);
 
         TextView Meal_name = (TextView) convertView.findViewById(R.id.Meal_name);
-        Meal_name.setText(menuRestaurantResource.get(position).getMeal_Name());
+        Meal_name.setText(menuOfRestaurantResource.get(position).getMeal_Name());
 
         TextView Meal_prix = (TextView) convertView.findViewById(R.id.Meal_prix);
-        Meal_prix.setText(menuRestaurantResource.get(position).getMeal_prix());
+        Meal_prix.setText(menuOfRestaurantResource.get(position).getMeal_prix());
 
         return convertView;
     }
