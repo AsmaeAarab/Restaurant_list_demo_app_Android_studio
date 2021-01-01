@@ -81,7 +81,7 @@ public class AcceuilActivity extends AppCompatActivity {
         }
          else{
           Toast.makeText(getApplicationContext(),"turn on your wifi please",Toast.LENGTH_LONG).show();
-             Permission_fonction.VerifyInternet(getApplicationContext());
+             Permission_fonction.VerifyInternet(this);
     }
 }
 

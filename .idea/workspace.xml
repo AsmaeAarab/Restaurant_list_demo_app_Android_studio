@@ -36,38 +36,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7bfe8f87-05e8-4f8d-8e4e-fc9a360585b6" name="Default Changelist" comment="finalisation (stable etat)">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MenuOfRestaurantActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/MenuItemsTable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/qrCode_Samples/Qrcode_wikipedia_fr_v2clean.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/AcceuilActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/AcceuilActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/LoginActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/LoginActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MapsActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MapsActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/MenuActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/Notification.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/Restaurant_Liste_Activity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Activities/Restaurant_Liste_Activity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/CategoryAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/CategoryAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/MenuAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/MenuOfRestaurantAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/RestaurantAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Adapters/RestaurantAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Cheked_permession_fonction/Permission_fonction.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Cheked_permession_fonction/Permission_fonction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/AuthentificationTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/AuthentificationTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/CategoryTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/CategoryTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/RestaurantDbHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/GlobalDbHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/RestaurantTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DB_Restaurant/RestaurantTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DataParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DialogBox/DialogGpsMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/DialogBox/DialogGpsMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/FetchURL.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/ItineraireTask.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Model/MenuRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/Model/MenuOfRestaurant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/PointsParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/TaskLoadedCallback.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/FctRestaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/RestaurantAdditionalServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/Menubar.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tprestaurant/fragments/Toolbar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_notification.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fct_restaurant.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_fct_restaurant.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_menubar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_menubar.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -443,10 +414,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="498" height="468" key="SwitcherDM/0.0.1366.728@0.0.1366.728" timestamp="1609281189237" />
-    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2" timestamp="1609381146899">
+    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2" timestamp="1609530447972">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609381146899" />
+    <state x="6" y="0" width="816" height="728" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1609530447972" />
     <state x="832" y="143" key="chooseDestDirectoryDialog" timestamp="1608856197799">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

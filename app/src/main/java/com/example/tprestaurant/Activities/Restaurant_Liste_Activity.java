@@ -1,9 +1,12 @@
 package com.example.tprestaurant.Activities;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.location.Location;
+import android.location.LocationListener;
 import android.os.Build;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -23,7 +26,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnItemClick;
 
-public class Restaurant_Liste_Activity extends AppCompatActivity {
+public class Restaurant_Liste_Activity extends AppCompatActivity implements LocationListener {
+    static Location currentLocation;
 @BindView(R.id.Restaurant_list)
     ListView Restaurant_list;
 
@@ -62,5 +66,10 @@ public class Restaurant_Liste_Activity extends AppCompatActivity {
         Restaurant selectedRestaurant = (Restaurant) Restaurant_list.getItemAtPosition(position);
         restaurantDetailsMaps.putExtra("SelectedRestaurant",(Serializable)selectedRestaurant);
         startActivity(restaurantDetailsMaps);
+    }
+    @Override
+    public void onLocationChanged(@NonNull Location location) {
+        currentLocation.setLatitude(location.getLatitude());
+        currentLocation.setLongitude(location.getLongitude());
     }
 }
